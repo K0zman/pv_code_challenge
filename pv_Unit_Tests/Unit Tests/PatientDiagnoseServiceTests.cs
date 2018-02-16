@@ -7,7 +7,7 @@ using Moq;
 using NUnit.Framework;
 using pv_BI.Services;
 
-namespace pv_Unit_Tests.Unit_Tests
+namespace pv_Tests.Unit_Tests
 {
     public class PatientDiagnoseServiceTests
     {
