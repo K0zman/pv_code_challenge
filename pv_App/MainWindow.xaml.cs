@@ -26,12 +26,15 @@ namespace pv_App
         private readonly IPatientRegistrationService _patientRegistrationService;
         private readonly IPatientDiagnoseService _patientDiagnoseService;
         private readonly IDecorateStringService _decorateStringService;
-        public MainWindow()
+        public MainWindow(
+            IPatientRegistrationService patientRegistrationService,
+            IPatientDiagnoseService patientDiagnoseService,
+            IDecorateStringService decorateStringService)
         {
             InitializeComponent();
-            _patientRegistrationService = new PatientRegistrationService();
-            _patientDiagnoseService = new PatientDiagnoseService();
-            _decorateStringService = new DecorateStringService();
+            _patientRegistrationService = patientRegistrationService;
+            _patientDiagnoseService = patientDiagnoseService;
+            _decorateStringService = decorateStringService;
         }
         private void Button_Register(object sender, RoutedEventArgs e)
         {
