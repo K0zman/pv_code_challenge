@@ -26,6 +26,7 @@ namespace pv_App
         private readonly IPatientRegistrationService _patientRegistrationService;
         private readonly IPatientDiagnoseService _patientDiagnoseService;
         private readonly IDecorateStringService _decorateStringService;
+        private readonly IEnumerable<int> _intCollection; 
         public MainWindow(
             IPatientRegistrationService patientRegistrationService,
             IPatientDiagnoseService patientDiagnoseService,
@@ -35,18 +36,18 @@ namespace pv_App
             _patientRegistrationService = patientRegistrationService;
             _patientDiagnoseService = patientDiagnoseService;
             _decorateStringService = decorateStringService;
+            _intCollection = Enumerable.Range(1, 100);
+
         }
         private void Button_Register(object sender, RoutedEventArgs e)
         {
-            var intList = Enumerable.Range(1, 100);
-            var convertedValues = _patientRegistrationService.Replace(intList);
+            var convertedValues = _patientRegistrationService.Replace(_intCollection);
             tBlockRegister.Text = _decorateStringService.Formater(convertedValues); 
         }
 
         private void Button_Diagnose(object sender, RoutedEventArgs e)
         {
-            var intList = Enumerable.Range(1, 100);
-            var convertedValues = _patientDiagnoseService.Replace(intList);
+            var convertedValues = _patientDiagnoseService.Replace(_intCollection);
             tBlockDiagnose.Text = _decorateStringService.Formater(convertedValues);
         }
         private void Button_Clear_Diagnose(object sender, RoutedEventArgs e)
