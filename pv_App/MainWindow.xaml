@@ -7,6 +7,20 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        
+        <Button x:Name="btnRegister" Content="Register" HorizontalAlignment="Left" Margin="50,57,0,0" VerticalAlignment="Top" Width="75" Click="Button_Register"/>
+        <Button x:Name="btnDiagnose" Content="Diagnose" HorizontalAlignment="Left" Margin="370,57,0,0" VerticalAlignment="Top" Width="75" Click="Button_Diagnose"/>
+        <Button x:Name="btnClearRegister" Content="Clear" HorizontalAlignment="Left" Margin="50,266,0,0" VerticalAlignment="Top" Width="75" Click="Button_Clear_Register"/>
+        <Button x:Name="btnClearDiagnose" Content="Clear" HorizontalAlignment="Left" Margin="370,266,0,0" VerticalAlignment="Top" Width="75" Click="Button_Clear_Diagnose"/>
+        <Border BorderBrush="Black" BorderThickness="2" HorizontalAlignment="Left" Height="143" Margin="32,103,0,0" VerticalAlignment="Top" Width="115">
+            <ScrollViewer VerticalScrollBarVisibility="Auto" >
+                <TextBlock x:Name="tBlockRegister" TextWrapping="Wrap" Text="TextBlock"/>
+            </ScrollViewer>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="2" HorizontalAlignment="Left" Height="143" Margin="349,103,0,0" VerticalAlignment="Top" Width="115">
+            <ScrollViewer VerticalScrollBarVisibility="Auto" >
+                <TextBlock x:Name="tBlockDiagnose" TextWrapping="Wrap" Text="TextBlock"/>
+            </ScrollViewer>
+        </Border>
+
     </Grid>
 </Window>

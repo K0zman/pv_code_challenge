@@ -93,5 +93,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\pv_BI\pv_BI.csproj">
+      <Project>{0741E7B8-D77A-48C1-B018-82602FBDB3E1}</Project>
+      <Name>pv_BI</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
