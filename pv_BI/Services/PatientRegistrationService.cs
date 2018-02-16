@@ -11,8 +11,7 @@ namespace pv_BI.Services
     {
         public IEnumerable<string> Replace(IEnumerable<int> values)
         {
-            var valueList = values.ToList();
-            return valueList.Select(x =>
+            return values.Select(x =>
             {
                 string formatedString = string.Empty;
 
